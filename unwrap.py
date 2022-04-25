@@ -12,12 +12,16 @@ args.add_argument('-r', '--face_resolution', type=int, default=600, help="Resolu
 args.add_argument('-f', '--face_offset', type=int, default=0, help="Offset the way faces are arranges in the final image.")
 
 if __name__ == '__main__':
-    args = args.parse_args()
 
+    # handle inputs
+    args = args.parse_args()
     image = cv2.imread(args.input)
+
+    # unwrap image
     ico_sampler = IcosahedralSampler(resolution=args.face)
     unwrapped_image = ico_sampler.unwrap(image, face_offset=args.face_offset)
 
+    # create output dir and save the unwrapped image
     output_dir = os.path.split(args.output)[0]
     if os.path.exists(output_dir):
         os.makedirs(output_dir)
