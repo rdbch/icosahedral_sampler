@@ -37,6 +37,10 @@ face_colors = ico_sampler.get_face_rgb(face_no=0, eq_image=eq_image)
 
 ```
 One can run the provided [sample notebook](./examples.ipynb) to see exactly how the code works.
+One can create shift the output image by specifying the _face_offset_ when calling ```ico_sampler.unwrap()```:
+
+![im](./assets/ico_fig.gif)
+
 
 ## Command line
 This repository also contains a command line utility program that can convert an equirectangular image 
