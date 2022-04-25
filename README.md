@@ -35,7 +35,7 @@ $ python unwrap.py --input=<path to input> \
 ## TODOs
 A list of TODOs that might be implemented in the future:
 - [ ] add interpolation when asmpling the colors (current method: nearest)
-- [ ] add a tutorial like notebook to go over the code
+- [ ] add a tutorial like notebook to go over spherical projections
 
 ## References
 During the creation of this repository I hhave found the following articles to be useful:
