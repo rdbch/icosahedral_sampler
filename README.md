@@ -1,9 +1,9 @@
-# Unwrapped Icosahedral
-A very humble repository for creating unwrapped icosahedral maps from equirectangular images. 
+# Unwrapped Icosahedral Maps
+Create unwrapped icosahedral maps from equirectangular images.
 
 
 ## Installation
-This code was developed using ```python 3.8```, however it should run on anything that has Python >= ``` 3.6```.
+This code was developed using ```python 3.8```, however it should run on anything that has  >= ```python 3.6```.
 
 To install the requirements, one can simply run:
 
