@@ -1,4 +1,4 @@
-# Unwrapped Icosahedral
+# Unwrapped Icosahedral Maps
 Create unwrapped icosahedral maps from equirectangular images.
 
 
