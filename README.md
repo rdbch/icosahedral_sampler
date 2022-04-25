@@ -1,7 +1,7 @@
-# Unwrapped Icosahedral Maps
+# Unwrapped Icosahedral Maps 
 Create unwrapped icosahedral maps from equirectangular images.
 
-
+![image](./assets/output.png)
 ## Installation
 This code was developed using ```python 3.8```, however it should run on anything that has  >= ```python 3.6```.
 
@@ -12,16 +12,27 @@ $ pip install -r requiremets.py
 ```
 
 ## Usage
-The base class that one should use is the ```IcosahedralSampler``` :
-
+The base class that one can use is the ```IcosahedralSampler``` class.
+Sample usage:
 ```python
-image = cv2.imread(path_to_image)
+from ico_sampler import IcosahedralSampler
+
+eq_image = imread('./assets/0.png')
 ico_sampler = IcosahedralSampler(resolution = 600)
+
+# generate unwrapped map(as presented above
+unwrapped_image = ico_sampler.unwrap(eq_image, face_offset=0)
+
+# create the image of the triangular face
+face_image = ico_sampler.get_face_image(face_no=0, eq_image=eq_image)
+
+# sample colors of the image
+face_colors = ico_sampler.get_face_rgb(face_no=0, eq_image=eq_image)
+
 ```
+One can run the provided [sample notebook](./examples.ipynb) to see exactly how the code works.
 
-
-One can check the provided [sample notebook](./examples.ipynb).
-
+## Command line
 This repository also contains a command line utility program that can convert an equirectangular image 
 to an incosahedral projection map:
 
@@ -31,6 +42,10 @@ $ python unwrap.py --input=<path to input> \
                    --face_resolution=500 \ 
                    --face_offset=0
 ```
+
+
+# Notes:
+- the image may be grainy due to the sampling method, using a higher resolution(>600px / face) should diminish this effect
 
 ## TODOs
 A list of TODOs that might be implemented in the future:
