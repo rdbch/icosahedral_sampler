@@ -20,13 +20,13 @@ from ico_sampler import IcosahedralSampler
 eq_image = imread('./assets/0.png')
 ico_sampler = IcosahedralSampler(resolution = 600)
 
-# generate unwrapped map(as presented above
+# generate unwrapped maps (as presented above)
 unwrapped_image = ico_sampler.unwrap(eq_image, face_offset=0)
 
 # create the image of the triangular face
 face_image = ico_sampler.get_face_image(face_no=0, eq_image=eq_image)
 
-# sample colors of the image
+# sample face colors from an eq image
 face_colors = ico_sampler.get_face_rgb(face_no=0, eq_image=eq_image)
 
 ```
@@ -39,10 +39,9 @@ to an incosahedral projection map:
 ```bash
 $ python unwrap.py --input=<path to input> \ 
                    --output=<path to output> \
-                   --face_resolution=500 \ 
+                   --face_resolution=600 \ 
                    --face_offset=0
 ```
-
 
 # Notes:
 - the image may be grainy due to the sampling method, using a higher resolution(>600px / face) should diminish this effect
