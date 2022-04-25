@@ -120,7 +120,7 @@ class IcosahedralSampler:
 
         # rasterize triangle (could also be done with analytically, but this is way more elegant)
         canvas = np.zeros([y, x], dtype=np.uint8)
-        canvas = cv2.drawContours(canvas, [*triangle], is_up, color=1, thickness=-1)
+        canvas = cv2.drawContours(canvas, [*triangle], int(is_up), color=1, thickness=-1)
         coords = np.argwhere(canvas == 1)[:, ::-1]
 
         # center coordinates in weight center
