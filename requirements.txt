@@ -1,0 +1,5 @@
+opencv-python==4.0.1
+numpy==1.20.3
+scipy==1.7.3
+matplotlib
+jupyterlab
