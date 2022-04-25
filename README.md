@@ -25,6 +25,10 @@ ico_sampler = IcosahedralSampler(resolution = 600)
 # generate unwrapped maps (as presented above)
 unwrapped_image = ico_sampler.unwrap(eq_image, face_offset=0)
 
+# generate unwrapped maps and shift they faces are put into the final panorama
+unwrapped_image = ico_sampler.unwrap(eq_image, face_offset=2)
+
+
 # create the image of the triangular face
 face_image = ico_sampler.get_face_image(face_no=0, eq_image=eq_image)
 
@@ -45,12 +49,10 @@ $ python unwrap.py --input=<path to input> \
                    --face_offset=0
 ```
 
-# Notes:
-- the image may be grainy due to the sampling method, using a higher resolution(>600px / face) should diminish this effect
-
 ## TODOs
 A list of TODOs that might be implemented in the future:
-- [ ] add interpolation when asmpling the colors (current method: nearest)
+- [ ] add interpolation when sampling the colors (current method: nearest) - this can cause grainy images, but 
+increasing the face resolution (>600px) should diminish this effect 
 - [ ] add a tutorial like notebook to go over spherical projections
 
 ## References
