@@ -12,23 +12,30 @@ $ pip install -r requiremets.py
 ```
 
 ## Usage
-The base class that one should use is:  
+The base class that one should use is the ```IcosahedralSampler``` :
 
-Additionally, one can check the provided [sample notebook](./examples.ipynb).
+```python
+image = cv2.imread(path_to_image)
+ico_sampler = IcosahedralSampler(resolution = 600)
+```
 
-This repository also contains a command line utility program that can creates such a map: 
+
+One can check the provided [sample notebook](./examples.ipynb).
+
+This repository also contains a command line utility program that can convert an equirectangular image 
+to an incosahedral projection map:
+
 ```bash
 $ python unwrap.py --input=<path to input> \ 
                    --output=<path to output> \
                    --face_resolution=500 \ 
                    --face_offset=0
 ```
-The second one, is by using the provided library as follows:
 
 ## TODOs
 A list of TODOs that might be implemented in the future:
-- [] add interpolation when asmpling the colors (current method: nearest)
-
+- [ ] add interpolation when asmpling the colors (current method: nearest)
+- [ ] add a tutorial like notebook to go over the code
 
 ## References
 During the creation of this repository I hhave found the following articles to be useful:
