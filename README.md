@@ -3,7 +3,6 @@ Create uwraped icosahedral maps from equirectangular images.
 
 
 ## Installation
----
 This code was developed using ```python 3.8```, however it should run 
 To install the requirements, one can simply run:
 
@@ -12,11 +11,9 @@ $ pip install -r requiremets.py
 ```
 
 ## Usage
----
 
 
 ## References
----
 During the creation of this repository I hhave found the following articles to be useful:
 
 - [http://www.paulbourke.net/panorama/icosahedral/](http://www.paulbourke.net/panorama/icosahedral/)
