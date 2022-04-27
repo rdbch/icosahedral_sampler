@@ -243,7 +243,7 @@ class IcosahedralSampler:
 
         colors = [self.get_face_rgb(i, eq_image) for i in range(20)]
         h_res = int(3**0.5/2*self.resolution)
-        canvas = np.zeros([3*h_res, int(5.5*self.resolution), 3], dtype=np.uint8)
+        canvas = np.ones([3*h_res, int(5.5*self.resolution), 3], dtype=np.uint8)*255
 
         # coordinates for moving the color from faces to canvas
         xy_up   = self.__get_triangle_coords(self.resolution, True, normalize=False, homogeneous=False, center=False)

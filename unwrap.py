@@ -18,12 +18,12 @@ if __name__ == '__main__':
     image = cv2.imread(args.input)
 
     # unwrap image
-    ico_sampler = IcosahedralSampler(resolution=args.face)
+    ico_sampler = IcosahedralSampler(resolution=args.face_resolution)
     unwrapped_image = ico_sampler.unwrap(image, face_offset=args.face_offset)
 
     # create output dir and save the unwrapped image
     output_dir = os.path.split(args.output)[0]
-    if os.path.exists(output_dir):
+    if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     cv2.imwrite(args.output, unwrapped_image)
