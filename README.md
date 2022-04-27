@@ -1,7 +1,7 @@
-# Unwrapped Icosahedral Maps 
+# Unwrapped Icosahedral Maps 🗺️
 My humble attempt to create unwrapped icosahedral maps from equirectangular images.
 Insipration taken from [here](http://www.paulbourke.net/panorama/icosahedral/).
-
+If you find this useful, please consider giving it a star ⭐
 ![image](./assets/output.png)
 
 ## Installation
